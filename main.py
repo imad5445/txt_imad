@@ -11,7 +11,7 @@ from pyrogram.types import Message
 import pyrogram
 import tgcrypto
 from p_bar import progress_bar
-from details import api_id, api_hash, bot_token, groups
+from details import api_id, api_hash, bot_token, sudo_group
 from subprocess import getstatusoutput
 import helper
 import logging
@@ -34,7 +34,7 @@ bot = Client(
       api_id=api_id,
       api_hash=api_hash, 
       bot_token=bot_token
-      groups=groups)
+      sudo_group=sudo_group)
 
 
 @bot.on_message(filters.command(["start"]) & (filters.chat(sudo_group)))
