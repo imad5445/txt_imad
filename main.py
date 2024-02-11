@@ -33,7 +33,8 @@ bot = Client(
      "bot",
       api_id=api_id,
       api_hash=api_hash, 
-      bot_token=bot_token)
+      bot_token=bot_token
+      groups=groups)
 
 
 @bot.on_message(filters.command(["start"]) & (filters.chat(sudo_group)))
